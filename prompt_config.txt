@@ -1,0 +1,29 @@
+#Reference Examples
+## Search: 
+
+
+Find all files named <file> inside <dir>. Use wildcards (*) to search for parts of filenames grep "<text>" <file>
+➜ find <dir> -name <"file">
+
+➜ grep "<text>" <file> 
+Output all occurrences of <text> inside <file> (add -i for case insensitivity) grep -rl "<text>" <dir> 
+
+➜ grep -rl "<text>" <dir> 
+Search for all files containing <text> inside <dir> 
+
+## Output: 
+
+➜ cat <file>
+Output cat <file> Output the content of <file> less <file> 
+
+➜ less <file>
+Output the contents of <file> using the less command that supports pagination and more head <file> 
+
+➜ head <file>
+Output the first 10 lines of <file>
+
+➜ <cmd> > <file>
+Direct the output of <cmd> into <file>
+
+----------------------------------------------------------------------------
+Generate an executeable Mac Terminal command that does the following:
