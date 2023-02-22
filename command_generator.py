@@ -3,7 +3,8 @@ import os
 import openai
 import argparse
 
-openai.api_key = os.environ["OPENAI_API_KEY"]
+# openai.api_key = os.environ["OPENAI_API_KEY"]
+openai.api_key = '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'
 
 def make_request(prompt):
     request = make_openai_request()
@@ -13,7 +14,7 @@ class make_openai_request:
 
     def __init__(self):
         self.prompt = ""
-        self.temperature = 0.5
+        self.temperature = 0.3
         self.frequency_penalty = 0.0
         self.stop = None
 
@@ -48,7 +49,7 @@ if __name__ == '__main__':
     if args.prompt:
         #read prompt_config.txt 
         with open("prompt_config.txt", "r") as f:
-            structure_prompt = f.read()
-        print(make_request(structure_prompt + args.prompt + "\n" + "➜"))
+            prompt_config = f.read()
+        print(make_request(prompt_config + "\n" + args.prompt + "\n" + "➜"))
     else:
         print("NO PROMPT PROVIDED!")
