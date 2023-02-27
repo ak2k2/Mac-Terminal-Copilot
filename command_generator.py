@@ -4,7 +4,7 @@ import openai
 import argparse
 
 # openai.api_key = os.environ["OPENAI_API_KEY"]
-openai.api_key = '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'
+openai.api_key = ''
 
 def make_request(prompt):
     request = make_openai_request()
